@@ -1,3 +1,5 @@
+package rule;
+
 import base.Flight;
 import intefaces.Selected;
 

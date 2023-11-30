@@ -1,4 +1,5 @@
 import base.Flight;
+import rule.TwoHourRuleImpl;
 import support.FlightBuilder;
 import support.FlightSelection;
 
