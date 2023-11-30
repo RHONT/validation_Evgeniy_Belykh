@@ -12,7 +12,10 @@ public class Main {
         FlightSelection flightSelection=new FlightSelection();
         flightSelection.setFlights(flights);
 
-        flights=flightSelection.rule(new TwoHourRuleImpl());
+        flights=flightSelection.
+                activeRule(new TwoHourRuleImpl()).
+                activeRule(new TwoHourRuleImpl()).
+                getFlights();
 
         System.out.println(flights);
 

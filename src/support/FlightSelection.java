@@ -21,11 +21,13 @@ public class FlightSelection {
 
     /**
      * Устанавливаем правило, которое будет делать выборку из существующего листа полетов.
+     * Принцип цеопчки
      * @param samplingByRule
      * @return
      */
-    public List<Flight> rule(Selected samplingByRule) {
-        return samplingByRule.select(flights);
+    public FlightSelection activeRule(Selected samplingByRule) {
+        flights=samplingByRule.select(flights);
+        return this;
     }
 
     public List<Flight> getFlights() {
