@@ -1,5 +1,12 @@
+import base.Flight;
+import support.FlightBuilder;
+
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        List<Flight> flights = FlightBuilder.createFlights();
+        flights.forEach(System.out::println);
+
     }
 }
