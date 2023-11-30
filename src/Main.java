@@ -1,4 +1,5 @@
 import base.Flight;
+import rule.DepartureBeforeCurrentTimeRuleImpl;
 import rule.TwoHourAtEarthRuleImpl;
 import support.FlightBuilder;
 import support.FlightWarped;
@@ -15,7 +16,7 @@ public class Main {
         FlightWarped flightWarped =new FlightWarped();
         flightWarped.setFlights(flights);
 
-        flights= flightWarped.setRules(List.of(new TwoHourAtEarthRuleImpl()));
+        flights= flightWarped.setRules(List.of(new TwoHourAtEarthRuleImpl(),new DepartureBeforeCurrentTimeRuleImpl()));
         flights.forEach(System.out::println);
 
 
