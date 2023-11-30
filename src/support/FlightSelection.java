@@ -3,6 +3,7 @@ package support;
 import base.Flight;
 import intefaces.Selected;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,18 +17,23 @@ public class FlightSelection {
      * @param flights
      */
     public void setFlights(List<Flight> flights) {
-        this.flights=flights;
+        this.flights=new ArrayList<>(flights);
     }
 
     /**
      * Устанавливаем правило, которое будет делать выборку из существующего листа полетов.
      * Принцип цеопчки
-     * @param samplingByRule
      * @return
      */
-    public FlightSelection activeRule(Selected samplingByRule) {
-        flights=samplingByRule.select(flights);
-        return this;
+    public List<Flight> setRules(List<Selected> rule) {
+        for (var element:rule) {
+            flights=element.select(flights);
+        }
+      return flights;
+    }
+
+    public List<Flight> setSingleRule(Selected rule) {
+        return rule.select(flights);
     }
 
     public List<Flight> getFlights() {
