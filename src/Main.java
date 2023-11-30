@@ -1,10 +1,12 @@
 import base.Flight;
+import intefaces.Rules;
 import rule.ArrivalDateLessDepartDateRuleImpl;
 import rule.DepartureBeforeCurrentTimeRuleImpl;
 import rule.TwoHourAtEarthRuleImpl;
 import support.FlightBuilder;
 import support.FlightWarped;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -17,10 +19,12 @@ public class Main {
         FlightWarped flightWarped =new FlightWarped();
         flightWarped.setFlights(flights);
 
-        flights= flightWarped.setRules(List.of(
+        List<Rules> rulesList=new ArrayList<>(List.of(
                 new TwoHourAtEarthRuleImpl(),
                 new DepartureBeforeCurrentTimeRuleImpl(),
                 new ArrivalDateLessDepartDateRuleImpl()));
+
+        flights= flightWarped.setRules(rulesList);
         flights.forEach(System.out::println);
 
 

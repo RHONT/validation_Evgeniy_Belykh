@@ -2,18 +2,15 @@ package rule;
 
 import base.Flight;
 import base.Segment;
-import intefaces.Selected;
+import intefaces.Rules;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.function.Predicate;
 
 /**
  * Правило: ожидание между рейсами не может превышать два часа
  */
-public class TwoHourAtEarthRuleImpl implements Selected {
+public class TwoHourAtEarthRuleImpl implements Rules {
 
     @Override
     public boolean select(Flight flight) {

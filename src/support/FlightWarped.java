@@ -1,7 +1,7 @@
 package support;
 
 import base.Flight;
-import intefaces.Selected;
+import intefaces.Rules;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,7 @@ public class FlightWarped {
     List<Flight> flights = null;
 
     /**
-     * Помещаем лист полетов, для дальнейшего преобразования.
-     *
+     * Создаем копию списка полетов, для дальнейшей выборке.
      * @param flights
      */
     public void setFlights(List<Flight> flights) {
@@ -24,11 +23,8 @@ public class FlightWarped {
 
     /**
      * Устанавливаем правило, которое будет делать выборку из существующего листа полетов.
-     * Принцип цеопчки
-     *
-     * @return
      */
-    public List<Flight> setRules(List<Selected> rules) {
+    public List<Flight> setRules(List<Rules> rules) {
         Predicate<Flight> flightPredicate = (flight) -> {
             for (var rule : rules) {
                 if (rule.select(flight)) {
@@ -41,13 +37,14 @@ public class FlightWarped {
         return flights;
     }
 
-    public List<Flight> setSingleRule(Selected rule) {
+    /**
+     * Установка одиночного правила
+     * @param rule
+     * @return
+     */
+    public List<Flight> setSingleRule(Rules rule) {
         Predicate<Flight> flightPredicate = rule::select;
         flights.removeIf(flightPredicate);
-        return flights;
-    }
-
-    public List<Flight> getFlights() {
         return flights;
     }
 }
