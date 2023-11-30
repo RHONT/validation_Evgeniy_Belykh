@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 /**
- * Если время ожидание между рейсами превышает два часа
+ * Правило: ожидание между рейсами не может превышать два часа
  */
 public class TwoHourAtEarthRuleImpl implements Selected {
 
