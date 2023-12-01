@@ -15,6 +15,7 @@ public class Main {
     public static void main(String[] args) {
 
         List<Flight> flights = FlightBuilder.createFlights();
+        System.out.println("Input Data:");
         flights.forEach(System.out::println);
         System.out.println("-".repeat(20));
 
@@ -26,6 +27,7 @@ public class Main {
                 new ArrivalDateMustBeMoreThanDepartDateRuleImpl()));
 
         flights= flightWarped.setRules(rulesList);
+        System.out.println("Output Data:");
         flights.forEach(System.out::println);
     }
 }
