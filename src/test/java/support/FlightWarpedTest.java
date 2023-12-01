@@ -54,4 +54,6 @@ class FlightWarpedTest {
         flightWarped.setSingleRule(arrivalDateLessDepartDateRule);
         assertEquals(3,flightWarped.getFlights().size());
     }
+
+
 }
