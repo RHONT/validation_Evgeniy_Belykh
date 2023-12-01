@@ -21,7 +21,7 @@ public class TwoHourAtEarthRuleImpl implements Rules {
         List<Segment> segmentList = flight.getSegments();
         for (int i = 1; i < segmentList.size(); i++) {
             Duration duration = Duration.between(segmentList.get(i - 1).getArrivalDate(), segmentList.get(i).getDepartureDate());
-            minutes += duration.toMinutes();
+            minutes += (int) duration.toMinutes();
         }
         return minutes > 120;
     }

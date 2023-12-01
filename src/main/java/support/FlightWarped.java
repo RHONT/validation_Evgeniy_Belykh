@@ -11,7 +11,7 @@ import java.util.function.Predicate;
  * Обертка List<Flight>.
  */
 public class FlightWarped {
-    List<Flight> flights = null;
+    List<Flight> flights;
 
     public FlightWarped(List<Flight> flights) {
         this.flights = flights;

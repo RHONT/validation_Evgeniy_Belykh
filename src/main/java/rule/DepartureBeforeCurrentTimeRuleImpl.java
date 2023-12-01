@@ -14,9 +14,7 @@ import java.util.function.Predicate;
 public class DepartureBeforeCurrentTimeRuleImpl implements Rules {
     @Override
     public boolean select(Flight flights) {
-        Predicate<Segment> segmentPredicate=(segment)->{
-            return LocalDateTime.now().isAfter(segment.getDepartureDate());
-        };
+        Predicate<Segment> segmentPredicate=(segment)-> LocalDateTime.now().isAfter(segment.getDepartureDate());
        return flights.getSegments().stream().anyMatch(segmentPredicate);
     }
 }

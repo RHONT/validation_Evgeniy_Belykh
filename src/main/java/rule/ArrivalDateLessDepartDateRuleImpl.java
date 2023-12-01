@@ -12,9 +12,7 @@ import java.util.function.Predicate;
 public class ArrivalDateLessDepartDateRuleImpl implements Rules {
     @Override
     public boolean select(Flight flights) {
-        Predicate<Segment> segmentPredicate=(segment)->{
-            return segment.getDepartureDate().isAfter(segment.getArrivalDate());
-        };
+        Predicate<Segment> segmentPredicate=(segment)-> segment.getDepartureDate().isAfter(segment.getArrivalDate());
         return flights.getSegments().stream().anyMatch(segmentPredicate);
     }
 }
