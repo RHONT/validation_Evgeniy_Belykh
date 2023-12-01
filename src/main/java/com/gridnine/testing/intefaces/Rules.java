@@ -1,6 +1,6 @@
-package intefaces;
+package com.gridnine.testing.intefaces;
 
-import base.Flight;
+import com.gridnine.testing.base.Flight;
 
 /**
  * Для классов реализующие выборку листа полетов.

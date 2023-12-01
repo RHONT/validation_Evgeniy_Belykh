@@ -1,12 +1,12 @@
 package constants;
 
-import base.Flight;
+import com.gridnine.testing.base.Flight;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static support.FlightBuilder.createFlight;
-import static support.FlightBuilder.createFlights;
+import static com.gridnine.testing.support.FlightBuilder.createFlight;
+import static com.gridnine.testing.support.FlightBuilder.createFlights;
 
 public class DifferentFlight {
 

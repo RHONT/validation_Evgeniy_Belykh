@@ -1,8 +1,8 @@
-package rule;
+package com.gridnine.testing.rule;
 
-import base.Flight;
-import base.Segment;
-import intefaces.Rules;
+import com.gridnine.testing.base.Flight;
+import com.gridnine.testing.base.Segment;
+import com.gridnine.testing.intefaces.Rules;
 
 import java.time.Duration;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Правило: ожидание между рейсами не может превышать два часа
  */
-public class TwoHourAtEarthRuleImpl implements Rules {
+public class IfWaitMoreThanTwoHourBetweenFlightsRuleImpl implements Rules {
 
     @Override
     public boolean select(Flight flight) {

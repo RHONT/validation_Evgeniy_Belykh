@@ -1,7 +1,7 @@
-package support;
+package com.gridnine.testing.support;
 
-import base.Flight;
-import intefaces.Rules;
+import com.gridnine.testing.base.Flight;
+import com.gridnine.testing.intefaces.Rules;
 
 import java.util.ArrayList;
 import java.util.List;

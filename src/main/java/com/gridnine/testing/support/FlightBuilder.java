@@ -1,7 +1,7 @@
-package support;
+package com.gridnine.testing.support;
 
-import base.Flight;
-import base.Segment;
+import com.gridnine.testing.base.Flight;
+import com.gridnine.testing.base.Segment;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

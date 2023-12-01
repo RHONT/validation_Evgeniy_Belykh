@@ -1,11 +1,11 @@
 package stresstest;
 
-import base.Flight;
+import com.gridnine.testing.base.Flight;
 import org.junit.jupiter.api.Test;
-import rule.ArrivalDateLessDepartDateRuleImpl;
-import rule.DepartureBeforeCurrentTimeRuleImpl;
-import rule.TwoHourAtEarthRuleImpl;
-import support.FlightWarped;
+import com.gridnine.testing.rule.ArrivalDateMustBeMoreThanDepartDateRuleImpl;
+import com.gridnine.testing.rule.DepartDateMustBeLessThanCurrentTimeRuleImpl;
+import com.gridnine.testing.rule.IfWaitMoreThanTwoHourBetweenFlightsRuleImpl;
+import com.gridnine.testing.support.FlightWarped;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,9 +13,9 @@ import java.util.List;
 import static constants.DifferentFlight.*;
 
 public class StressTest {
-    ArrivalDateLessDepartDateRuleImpl arrivalDateLessDepartDateRule=new ArrivalDateLessDepartDateRuleImpl();
-    DepartureBeforeCurrentTimeRuleImpl departureBeforeCurrentTimeRule=new DepartureBeforeCurrentTimeRuleImpl();
-    TwoHourAtEarthRuleImpl twoHourAtEarthRule=new TwoHourAtEarthRuleImpl();
+    ArrivalDateMustBeMoreThanDepartDateRuleImpl arrivalDateLessDepartDateRule=new ArrivalDateMustBeMoreThanDepartDateRuleImpl();
+    DepartDateMustBeLessThanCurrentTimeRuleImpl departureBeforeCurrentTimeRule=new DepartDateMustBeLessThanCurrentTimeRuleImpl();
+    IfWaitMoreThanTwoHourBetweenFlightsRuleImpl twoHourAtEarthRule=new IfWaitMoreThanTwoHourBetweenFlightsRuleImpl();
     @Test
     void oneThousandForRuleArrivalDateLessDepartDate(){
         List<Flight> flightDifferentList=new ArrayList<>();
