@@ -25,7 +25,6 @@ public class Main {
                 new DepartDateMustBeLessThanCurrentTimeRuleImpl(),
                 new ArrivalDateMustBeMoreThanDepartDateRuleImpl()));
 
-
         flights= flightWarped.setRules(rulesList);
         flights.forEach(System.out::println);
     }

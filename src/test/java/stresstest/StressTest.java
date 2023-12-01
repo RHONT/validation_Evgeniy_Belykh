@@ -12,6 +12,9 @@ import java.util.List;
 
 import static constants.DifferentFlight.*;
 
+/**
+ * По результатам тестов и обработке 60_000 записей нужны в оптимизации нет. Уходят лишь доли секунды на обрботку.
+ */
 public class StressTest {
     ArrivalDateMustBeMoreThanDepartDateRuleImpl arrivalDateLessDepartDateRule=new ArrivalDateMustBeMoreThanDepartDateRuleImpl();
     DepartDateMustBeLessThanCurrentTimeRuleImpl departureBeforeCurrentTimeRule=new DepartDateMustBeLessThanCurrentTimeRuleImpl();
