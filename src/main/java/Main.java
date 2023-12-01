@@ -16,8 +16,7 @@ public class Main {
         flights.forEach(System.out::println);
         System.out.println("----------------");
 
-        FlightWarped flightWarped =new FlightWarped();
-        flightWarped.setFlights(flights);
+        FlightWarped flightWarped =new FlightWarped(flights);
 
         List<Rules> rulesList=new ArrayList<>(List.of(
                 new TwoHourAtEarthRuleImpl(),

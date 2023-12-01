@@ -13,6 +13,10 @@ import java.util.function.Predicate;
 public class FlightWarped {
     List<Flight> flights = null;
 
+    public FlightWarped(List<Flight> flights) {
+        this.flights = flights;
+    }
+
     /**
      * Создаем копию списка полетов, для дальнейшей выборке.
      * @param flights
@@ -45,6 +49,10 @@ public class FlightWarped {
     public List<Flight> setSingleRule(Rules rule) {
         Predicate<Flight> flightPredicate = rule::select;
         flights.removeIf(flightPredicate);
+        return flights;
+    }
+
+    public List<Flight> getFlights() {
         return flights;
     }
 }
