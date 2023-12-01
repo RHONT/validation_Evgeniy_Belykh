@@ -14,7 +14,7 @@ public class FlightWarped {
     List<Flight> flights;
 
     public FlightWarped(List<Flight> flights) {
-        this.flights = flights;
+        this.flights =new ArrayList<>(flights);
     }
 
     /**
