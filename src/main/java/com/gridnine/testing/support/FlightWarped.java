@@ -55,4 +55,8 @@ public class FlightWarped {
     public List<Flight> getFlights() {
         return flights;
     }
+
+     static class AA{
+
+    }
 }
